@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Benchmark1.Program-20221114-191624</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.1, OS=Windows 10.0.22621
+Intel Core i7-10875H CPU 2.30GHz, 1 CPU, 16 logical and 8 physical cores
+.NET SDK=6.0.401
+  [Host]     : .NET 6.0.10 (6.0.1022.47605), X64 RyuJIT  [AttachedDebugger]
+  Job-HTMSQT : .NET 6.0.10 (6.0.1022.47605), X64 RyuJIT
+</code></pre>
+<pre><code>Platform=X64  Runtime=.NET 6.0  
+</code></pre>
+
+<table>
+<thead><tr><th>    Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Gen 0</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>ForLoop</td><td>6.114 ns</td><td>0.1457 ns</td><td>0.1292 ns</td><td>-</td><td>-</td>
+</tr><tr><td>ForeachLoop</td><td>18.567 ns</td><td>0.2464 ns</td><td>0.2305 ns</td><td>0.0048</td><td>40 B</td>
+</tr><tr><td>EnumeratorLoop</td><td>17.904 ns</td><td>0.0884 ns</td><td>0.0784 ns</td><td>0.0048</td><td>40 B</td>
+</tr><tr><td>LinqOrderByFirst</td><td>40.064 ns</td><td>0.4931 ns</td><td>0.4612 ns</td><td>0.0162</td><td>136 B</td>
+</tr><tr><td>LinqMin</td><td>19.397 ns</td><td>0.1289 ns</td><td>0.1076 ns</td><td>0.0048</td><td>40 B</td>
+</tr></tbody></table>
+</body>
+</html>

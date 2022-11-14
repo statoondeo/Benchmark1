@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Benchmark1.Benchmarks-20221111-185808</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.1, OS=Windows 10.0.22621
+Intel Core i7-10875H CPU 2.30GHz, 1 CPU, 16 logical and 8 physical cores
+.NET SDK=6.0.401
+  [Host]     : .NET 6.0.10 (6.0.1022.47605), X64 RyuJIT  [AttachedDebugger]
+  Job-ARQGYI : .NET 6.0.10 (6.0.1022.47605), X64 RyuJIT
+</code></pre>
+<pre><code>Platform=X64  Runtime=.NET 6.0  
+</code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Ratio</th><th>RatioSD</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>Scenario1</td><td>0.0005 ns</td><td>0.0020 ns</td><td>0.0018 ns</td><td>0.0000 ns</td><td>?</td><td>?</td><td>-</td>
+</tr><tr><td>Scenario2</td><td>0.0227 ns</td><td>0.0261 ns</td><td>0.0244 ns</td><td>0.0190 ns</td><td>?</td><td>?</td><td>-</td>
+</tr></tbody></table>
+</body>
+</html>
